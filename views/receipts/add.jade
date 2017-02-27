@@ -1,0 +1,13 @@
+extends ../base.jade
+
+// [START form]
+block content
+  h3 Add new receipt
+  form(method="POST", enctype="multipart/form-data")
+      label(for="image") Receipt Image
+      input.form-control(type="file", name="image", id="image")
+    .form-group.hidden(style="display: none")
+      label(for="imageUrl") Receipt Image URL
+      input.form-control(type="text", name="imageUrl", id="imageUrl", , style="display: hidden")
+    button.btn.btn-success(type="submit") Save
+// [END form]
